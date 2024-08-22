@@ -1,4 +1,5 @@
 Este é um projeto [Next.js](https://nextjs.org/)
+Foi construido utilizando as tecnologias: NextJs, React, Typescript, Jest, Sass, Babel e HTML/CSS. Está rodando com a versão 20.13.1 do Node por ser um requisito para o Next 14.
 
 ## Primeiros passos
 
