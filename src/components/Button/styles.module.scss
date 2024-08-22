@@ -1,0 +1,42 @@
+$clip: 10px;
+
+.button {
+  all: unset;
+  cursor: pointer;
+  clip-path: polygon(
+    $clip 0,
+    0 $clip,
+    0 100%,
+    calc(100% - $clip) 100%,
+    100% calc(100% - $clip),
+    100% 0
+  );
+  padding: 8px;
+  width: 100%;
+  height: fit-content;
+  max-width: 150px;
+  text-align: center;
+  box-sizing: border-box;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.primary {
+  background: var(--color-primary);
+  color: white;
+}
+
+.secondary {
+  background: var(--color-secondary);
+  color: white;
+}
+
+.inverse {
+  background: white;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  clip-path: none;
+}

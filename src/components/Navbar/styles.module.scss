@@ -1,0 +1,11 @@
+.header {
+  width: 100%;
+
+  .navbar {
+    background-color: var(--bg-primary);
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    width: 100%;
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@assets": ["./public/assets"],
+      "@assets/*": ["./public/assets/*"],
+      "@images/*": ["./public/assets/images/*"],
+      "@components": ["./src/components"],
+      "@context": ["./src/context"],
+      "@context/*": ["./src/context/*"],
+      "@hooks": ["./src/hooks"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@utils": ["./src/utils"],
+      "@utils/*": ["./src/utils/*"],
+      "@services": ["./src/services"],
+      "@services/*": ["./src/services/*"],
+      "@styles/*": ["./src/styles/*"],
+      "@api/*": ["./src/pages/api/*"],
+      "@mocks": ["./src/mocks"],
+      "@mocks/*": ["./src/mocks/*"],
+      "@types/*": ["./src/types/*"]
+    },
+    "types": ["@testing-library/jest-dom", "jest", "node"]
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+}

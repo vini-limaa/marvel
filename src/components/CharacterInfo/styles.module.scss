@@ -1,0 +1,137 @@
+.characterInfo {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  position: relative;
+
+  .close {
+    all: unset;
+    position: absolute;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 100%;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    z-index: 12;
+    font-weight: bold;
+
+    &:hover {
+      background: #eeeeee;
+    }
+  }
+
+  .container {
+    display: flex;
+    height: auto;
+    width: 100%;
+
+    .shape {
+      width: 100%;
+      background: #262936;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .title {
+        background-color: white;
+        color: black;
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+        height: fit-content;
+        padding-bottom: 10px;
+        border-radius: 0px 0px 10px 10px;
+        text-transform: uppercase;
+      }
+
+      .content {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        padding: 20px;
+
+        .grid {
+          background: white;
+          padding: 10px;
+          border-radius: 5px;
+        }
+
+        .char {
+          display: flex;
+          gap: 10px;
+          margin-bottom: 10px;
+
+          img {
+            height: auto;
+            width: 100%;
+            max-width: 200px;
+            object-fit: cover;
+            object-position: left;
+          }
+        }
+
+        .type {
+          text-transform: uppercase;
+
+          &:first-child {
+            margin-top: 0;
+          }
+        }
+
+        .link {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          word-break: break-all;
+          color: blue;
+        }
+
+        .cards {
+          img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .characterInfo {
+    .container {
+      .shape {
+        .content {
+          grid-template-columns: 1fr !important;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  .characterInfo {
+    .container {
+      .shape {
+        .content {
+          .char {
+            flex-direction: column !important;
+
+            img {
+              max-width: unset;
+            }
+          }
+        }
+      }
+    }
+  }
+}
