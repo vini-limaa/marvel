@@ -28,7 +28,7 @@ const getAllChar = async (times, qty, initial) => {
     let arr = []
     const getItems = async (offset, limit) => {
       const data = await fetch(
-        `https://gateway.marvel.com/v1/public/characters?apikey=dd6e95b8aee3e0da210f77b0b2adae47&hash=a7f41b9c7a31ae9c19664d3c4c8b18f5&ts=001&offset=${offset}&limit=${limit}`,
+        `https://gateway.marvel.com/v1/public/characters?apikey='SUA-API'&hash='SUA-HASH'&ts=001&offset=${offset}&limit=${limit}`,
         {
           method: 'GET'
         }
